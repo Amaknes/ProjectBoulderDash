@@ -4,6 +4,12 @@ public class Controller {
 	private int level;
 	private char[] map;
 
+	/** The view. */
+	private final IView view;
+
+	/** The model. */
+	private final IModel model;
+
 	/**
 	 * 
 	 * @author Loick Legay
@@ -11,33 +17,29 @@ public class Controller {
 	 * 
 	 *
 	 */
-	
-	
-	public void start(int level) {
-		
+
+	public Controller(int level) {
 	}
-	
-	
-	
+
+	public void start(int level) {
+
+	}
+
 	public char initMap(int level) {
-		
-		
+
 		return 0;
 	}
-	
 
-	
 	public void inGame() {
-		
+
 	}
-	
-	
-	//getter
+
+	// getter
 	public int getLevel() {
 		return level;
 	}
 
-	//setter
+	// setter
 	public void setLevel(int level) {
 		this.level = level;
 	}
