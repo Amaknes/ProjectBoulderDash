@@ -1,4 +1,9 @@
+package controller;
+
 import javax.swing.text.View;
+
+import model.IModel;
+import view.IView;
 
 public class Controller {
 	private int level;
@@ -9,17 +14,14 @@ public class Controller {
 
 	/** The model. */
 	private final IModel model;
+		
+		
 
-	/**
-	 * 
-	 * @author Loick Legay
-	 * @since 2017-06-19
-	 * 
-	 *
-	 */
-
-	public Controller(int level) {
+	public Controller (int level) {
+		this.view=null;
+		this.model=null;
 	}
+
 
 	public void start(int level) {
 
