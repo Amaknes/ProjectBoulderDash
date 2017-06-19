@@ -18,6 +18,6 @@ public class Exitdoor extends Entities{
 	
 	public void show(){}
 	public void exit(){}
-	
+	 
 }
 //test
