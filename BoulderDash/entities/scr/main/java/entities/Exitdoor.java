@@ -20,3 +20,4 @@ public class Exitdoor extends Entities{
 	public void exit(){}
 	
 }
+//test
