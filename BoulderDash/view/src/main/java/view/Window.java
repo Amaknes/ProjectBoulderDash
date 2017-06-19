@@ -20,11 +20,11 @@ public class Window
 	/**
 	 * Displays the actual state of the Game
      * @author      Amaury Vincent
-	 *
+	 * @param Table : Table that contains the actual state of the game
 	 */
-	void Display()
+	void Display(char[][] Table)
 	{
 		
 	}
-} //test
+}
 
