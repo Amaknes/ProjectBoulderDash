@@ -7,7 +7,7 @@ import java.awt.Image;
  * @since 2017-06-19
  * 
  *
- */A
+ */
 public class Wall extends Entities {
 	
 	public Wall(String name, Image path, char code) {
