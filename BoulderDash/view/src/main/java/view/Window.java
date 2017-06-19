@@ -2,7 +2,7 @@ package view;
 /**
  * 
  *
- * Spawns the Frame and the Panel and uses them in a single Class
+ * Spawns the frame and the panel and uses them in a single Class
  * @author      Amaury Vincent
  * @since       2017-06-16
  */
