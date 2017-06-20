@@ -19,8 +19,8 @@ public class Main  {
      *            the arguments
      */
     public static void main(final String[] args){
-        Controller controller = new Controller();
-        controller.start(1);
+        Controller controller = new Controller(1);
+        controller.start();
     }
 
 }
