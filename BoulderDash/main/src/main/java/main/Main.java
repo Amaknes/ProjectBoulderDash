@@ -1,7 +1,10 @@
 package main;
 
 
+import java.sql.SQLException;
+
 import controller.Controller;
+import model.*;
 
 /**
  * <h1>The Class Main.</h1>
@@ -17,10 +20,11 @@ public class Main  {
      *
      * @param args
      *            the arguments
+     * @throws SQLException 
      */
-    public static void main(final String[] args){
+    public static void main(final String[] args) throws SQLException{
         Controller controller = new Controller(1);
         controller.start();
     }
-
-}
+    	//ReadData data = new ReadData();  -> lire base de donnée
+    }

@@ -9,6 +9,7 @@ package controller;
  */
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
 import entities.Player;
 
 public class KeyBinding implements KeyListener {

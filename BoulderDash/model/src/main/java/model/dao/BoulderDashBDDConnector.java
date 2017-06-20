@@ -12,7 +12,7 @@ import java.sql.Statement;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-final class BoulderDashBDDConnector {
+public final class BoulderDashBDDConnector {
 
     /** The instance. */
     private static BoulderDashBDDConnector instance;
@@ -35,8 +35,9 @@ final class BoulderDashBDDConnector {
     /**
      * Instantiates a new boulder dash BDD connector.
      */
-    private BoulderDashBDDConnector() {
+    public BoulderDashBDDConnector() {
         this.open();
+        System.out.print("open");
     }
 
     /**
@@ -60,7 +61,7 @@ final class BoulderDashBDDConnector {
     private static void setInstance(final BoulderDashBDDConnector instance) {
         BoulderDashBDDConnector.instance = instance;
     }
-
+    
     /**
      * Open.
      *
