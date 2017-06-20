@@ -13,7 +13,7 @@ import view.IView;
  */
 public class Controller {
 	private int level;
-	private char[][] map;
+	private char[] map;
 	private boolean gameRunning;
 	
 	/** The view. */
@@ -43,9 +43,16 @@ public class Controller {
 
 		return 0;
 	}
-
+	/**
+	 * Controller
+	 * @author      Amaury VINCENT 
+	 * @since       2017-06-20
+	 * 
+	 */
 	public void inGameLoop() {
-
+		//RockfordDeplacementAcknoledgement
+		//Monster Deplacement
+		//Gravity
 	}
 
 	// getter
