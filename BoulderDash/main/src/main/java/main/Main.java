@@ -9,6 +9,7 @@ import controller.Controller;
  * @author Flavien Spataro
  * @version 1.0
  */
+//Verification
 public class Main  {
 
     /**
@@ -17,7 +18,7 @@ public class Main  {
      * @param args
      *            the arguments
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args){
         Controller controller = new Controller(1);
         controller.start(1);
     }
