@@ -33,7 +33,6 @@ public class KeyBinding implements KeyListener {
 				break;
 			case KeyEvent.VK_UP:
 				Player.move(2);
- 
 				break;
 			case KeyEvent.VK_RIGHT:
 				Player.move(3);
@@ -45,7 +44,7 @@ public class KeyBinding implements KeyListener {
 	}
 	@Override
 	public void keyReleased(KeyEvent k) {
-		//Player.move(0);
+		Player.move(0);
 		// TODO Auto-generated method stub
 		
 	}
