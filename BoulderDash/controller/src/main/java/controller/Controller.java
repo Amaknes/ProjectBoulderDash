@@ -15,7 +15,7 @@ public class Controller {
 	private int level;
 	private char[] map;
 	private boolean gameRunning;
-
+	
 	/** The view. */
 	private final IView view;
 
