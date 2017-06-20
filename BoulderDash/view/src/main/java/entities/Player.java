@@ -15,6 +15,6 @@ public class Player extends Entities {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void move(){}
+	public static void move(int a){}
 
 }
