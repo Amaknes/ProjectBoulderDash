@@ -10,4 +10,7 @@ package entities;
 public interface Gravity {
 
 	public default void fall(){}
+	
+	public default void tumbling(){}
+	
 }
