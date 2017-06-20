@@ -9,7 +9,7 @@ package controller;
  */
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+import entities.Player;
 
 public class KeyBinding implements KeyListener {
 	private int id;
@@ -29,17 +29,17 @@ public class KeyBinding implements KeyListener {
 		int key = k.getKeyCode();
 		switch (key) {
 			case KeyEvent.VK_DOWN : 
-				//Player.move(1);
+				Player.move(1);
 				break;
 			case KeyEvent.VK_UP:
-				//Player.move(2);
+				Player.move(2);
  
 				break;
 			case KeyEvent.VK_RIGHT:
-				//Player.move(3);
+				Player.move(3);
 				break;
 			case KeyEvent.VK_LEFT:
-				//Player.move(4);
+				Player.move(4);
 				break;
 		}
 	}
