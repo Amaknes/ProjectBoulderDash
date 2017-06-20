@@ -13,7 +13,7 @@ import view.IView;
  */
 public class Controller {
 	private int level;
-	private char[] map;
+	private char[][] map;
 	private boolean gameRunning;
 	
 	/** The view. */
@@ -44,7 +44,7 @@ public class Controller {
 		return 0;
 	}
 
-	public void inGame() {
+	public void inGameLoop() {
 
 	}
 
