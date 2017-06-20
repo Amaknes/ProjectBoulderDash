@@ -12,7 +12,7 @@ public class Window
 	Frame WindowFrame;
 	Panel WindowPanel;
 	
-	Window() 
+	public Window() 
 	{
 		this.WindowFrame = new Frame();
 		this.WindowPanel = new Panel();
