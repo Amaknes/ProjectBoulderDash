@@ -16,8 +16,10 @@ import model.dao.*;
 
 public class ReadData extends AbstractDAO {
 	//private String dataMap;
-	
+
+	public String data = null;
 	public ReadData() {
+		
 		
 		try {
 			this.lireBase();
@@ -32,6 +34,7 @@ public class ReadData extends AbstractDAO {
 	  */
 }
 	public void lireBase() throws SQLException {
+		
 		String url = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
 		String login = "root";
 		String passwd = "";
@@ -49,11 +52,39 @@ public class ReadData extends AbstractDAO {
 		
 		rs = st.executeQuery(sql);
 		while(rs.next()) {
-			System.out.println(rs.getString("map"));
+			
+			
+			this.data = (rs.getString("map"));
 		}
+		
+		System.out.println(data);
+		this.split();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-}
+	
+	public void split() {
+		//tableau
+		char tab[][];
+		tab = new char[24][24];
+		String[] splitArray = null;
+		String str = this.data;
+		splitArray = str.split(";");
+		for(int i = 0; i< splitArray.length;i++){
+			   // On affiche chaque élément du tableau
+			
+			for(int y = 0; y<25;y++){
+				
+				System.out.print(splitArray[i].charAt(y));
+				tab[i][y]=splitArray[i].charAt(y);
+			} 
+			System.out.println("i : " + i);
+		}
+		
+		System.out.println(data.charAt(27));  
+			 
+		}
+	}
+
