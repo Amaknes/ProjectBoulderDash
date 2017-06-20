@@ -24,16 +24,17 @@ public class Controller {
 		
 		
 
-	public Controller () {
+	public Controller (int level) {
 		this.view=null;
 		this.model=null;
 		this.initMap(level);
 		gameRunning = true;
+		this.level = level;
 	}
 
 
-	public void start(int level) {
-		this.level = level;
+	public void start() {
+		
 		
 		
 	}
