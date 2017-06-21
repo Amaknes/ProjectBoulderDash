@@ -27,12 +27,10 @@ public class ReadData extends AbstractDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		/*BoulderDashBDDConnector connector = new BoulderDashBDDConnector();
+		//this.text();
 		
-	    System.out.println("message");
-	    System.out.println(connector.executeQuery("SELECT * FROM maps WHERE id=1"));
-	  */
 }
+	
 	public void lireBase() throws SQLException {
 		
 		String url = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
@@ -57,7 +55,7 @@ public class ReadData extends AbstractDAO {
 			this.data = (rs.getString("map"));
 		}
 		
-		System.out.println(data);
+		//System.out.println(data);
 		this.split();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -72,19 +70,18 @@ public class ReadData extends AbstractDAO {
 		String[] splitArray = null;
 		String str = this.data;
 		splitArray = str.split(";");
-		for(int i = 0; i< splitArray.length;i++){
+		for(int i = 0; i<25;i++){
 			   // On affiche chaque élément du tableau
 			
 			for(int y = 0; y<25;y++){
 				
 				System.out.print(splitArray[i].charAt(y));
-				tab[i][y]=splitArray[i].charAt(y);
+				//tab[i][y]='A';
+				//System.out.print(y);
 			} 
-			System.out.println("i : " + i);
 		}
 		
 		System.out.println(data.charAt(27));  
 			 
 		}
 	}
-
