@@ -13,14 +13,20 @@ public class StrategyDecider {
 	char TestedCase1;
 	if(TestedCase == 'G' || TestedCase == 'R') 
 	{
+		//DébutCheckTumbling
 		TestedCase = controller.getTableauValue(CaseX,CaseY-1);
 		if(TestedCase == 'G' || TestedCase == 'R')
 		{
-		 TestedCase = controller.getTableauValue(CaseX,CaseY);
-		 TestedCase1 = controller.getTableauValue(CaseX,CaseY);
+		 //DébutCheckTumblingLeft
+		 TestedCase = controller.getTableauValue(CaseX-1,CaseY);
+		 TestedCase1 = controller.getTableauValue(CaseX-1,CaseY-1);
 		 if(TestedCase == 'V' && TestedCase1 == 'V')
 		 	{
-			 
+			 controller.setTableauValue(CaseX, CaseY, 'V');
+			 if(TestedCase == 'V' && TestedCase1 == 'V')
+			 	{
+				 
+			 	}
 		 	}
 		}
 		}
