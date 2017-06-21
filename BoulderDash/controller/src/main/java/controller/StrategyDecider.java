@@ -10,6 +10,7 @@ public class StrategyDecider {
 	public void DefineStrategyFromContext(int CaseX,int CaseY, Controller controller)
  {
 	char TestedCase = controller.getTableauValue(CaseX,CaseY);
+	char TestedCaseOrigin = TestedCase;
 	char TestedCase1;
 	if(TestedCase == 'G' || TestedCase == 'R') 
 	{
@@ -23,7 +24,11 @@ public class StrategyDecider {
 		 if(TestedCase == 'V' && TestedCase1 == 'V')
 		 	{
 			 controller.setTableauValue(CaseX, CaseY, 'V');
-			 if(TestedCase == 'V' && TestedCase1 == 'V')
+			 if(TestedCaseOrigin == 'D')
+			 	{
+				 
+			 	}
+			 else
 			 	{
 				 
 			 	}
