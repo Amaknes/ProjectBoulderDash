@@ -14,6 +14,13 @@ import java.sql.ResultSet;
 
 import model.dao.*;
 
+/**
+ * Controller
+ * @author      Loick Legay 
+ * @since       2017-06-21
+ * 
+ */
+
 public class ReadData extends AbstractDAO {
 	//private String dataMap;
 	
@@ -47,7 +54,7 @@ public class ReadData extends AbstractDAO {
 		cn = DriverManager.getConnection(url, login, passwd);
 		
 		st = (Statement) cn.createStatement();
-		String sql = "SELECT * FROM	maps";
+		String sql = "SELECT * FROM	maps WHERE id = 5";
 		
 		rs = st.executeQuery(sql);
 		while(rs.next()) {
@@ -82,9 +89,7 @@ public class ReadData extends AbstractDAO {
 			} 
 		}
 		
-		/*      SHOW TABLE :
-		 * 
-		 * 
+		
 		for(int i = 0; i < this.tabMap.length; i++) {
             for(int j =0; j < this.tabMap.length; j++) {
                  
@@ -94,7 +99,7 @@ public class ReadData extends AbstractDAO {
             }
             System.out.println("");
         }
-		*/
+		
 		
 		
 	}
