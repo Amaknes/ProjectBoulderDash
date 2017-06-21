@@ -6,8 +6,12 @@ public class StrategyDecider {
  {
 	 this.Strat= NewStrat;
  }
- public void DefineStrategyFromContext()
+ public void DefineStrategyFromContext(int CaseX,int CaseY, Controller controller)
  {
-	 
+	char TestedCase = controller.getTableauValue(CaseX,CaseY);
+	if(TestedCase == 'G' || TestedCase == 'R') 
+	{
+		
+	}
  }
 }
