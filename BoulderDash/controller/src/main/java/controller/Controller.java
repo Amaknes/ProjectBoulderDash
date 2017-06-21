@@ -1,7 +1,5 @@
 package controller;
 
-import javax.swing.text.View;
-
 import model.IModel;
 import view.IView;
 import view.Window;

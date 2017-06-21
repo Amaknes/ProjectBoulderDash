@@ -1,5 +1,6 @@
 package controller;
 
+
 public class StrategyDecider {
  private Strategy Strat;
  public void ChangeStrategy(Strategy NewStrat)
