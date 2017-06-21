@@ -5,6 +5,7 @@ import javax.swing.text.View;
 
 import model.IModel;
 import view.IView;
+import view.Window;
 /**
  * Controller
  * @author      Loick Legay 
@@ -15,6 +16,7 @@ public class Controller {
 	private int level;
 	private char[][] map;
 	private boolean gameRunning;
+	Window window;
 	
 	/** The view. */
 	private final IView view;
@@ -30,6 +32,8 @@ public class Controller {
 		this.initMap(level);
 		gameRunning = true;
 		this.level = level;
+		this.window= new Window();
+		
 	}
 
 
