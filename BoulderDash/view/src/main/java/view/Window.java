@@ -1,4 +1,7 @@
 package view;
+
+import javax.swing.JFrame;
+
 /**
  * 
  *
@@ -16,6 +19,13 @@ public class Window
 	{
 		this.WindowFrame = new Frame();
 		this.WindowPanel = new Panel();
+		WindowFrame.setTitle("BoulderDash");
+		WindowFrame.setSize(400,400);
+		WindowFrame.setLocationRelativeTo(null);
+		WindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		WindowFrame.setContentPane(WindowPanel);
+		
+		WindowFrame.setVisible(true);
 	}
 	/**
 	 * Displays the actual state of the Game
