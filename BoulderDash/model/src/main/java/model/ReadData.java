@@ -16,7 +16,8 @@ import model.dao.*;
 
 public class ReadData extends AbstractDAO {
 	//private String dataMap;
-
+	
+	public char tabMap[][];
 	public String data = null;
 	public ReadData() {
 		
@@ -65,23 +66,36 @@ public class ReadData extends AbstractDAO {
 	
 	public void split() {
 		//tableau
-		char tab[][];
-		tab = new char[24][24];
+		
+		this.tabMap = new char[25][25];
 		String[] splitArray = null;
 		String str = this.data;
 		splitArray = str.split(";");
 		for(int i = 0; i<25;i++){
-			   // On affiche chaque élément du tableau
+			   
 			
 			for(int y = 0; y<25;y++){
 				
-				System.out.print(splitArray[i].charAt(y));
-				//tab[i][y]='A';
-				//System.out.print(y);
+				
+				this.tabMap[i][y]=splitArray[i].charAt(y);
+				
 			} 
 		}
 		
-		System.out.println(data.charAt(27));  
-			 
-		}
+		/*      SHOW TABLE :
+		 * 
+		 * 
+		for(int i = 0; i < this.tabMap.length; i++) {
+            for(int j =0; j < this.tabMap.length; j++) {
+                 
+                System.out.print(this.tabMap[i][j]);
+             
+ 
+            }
+            System.out.println("");
+        }
+		*/
+		
+		
 	}
+}
