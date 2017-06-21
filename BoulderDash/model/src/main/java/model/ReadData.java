@@ -21,11 +21,13 @@ import model.dao.*;
  * 
  */
 
-public class ReadData extends AbstractDAO {
+public class ReadData implements IModel {
 	//private String dataMap;
 	
 	public char tabMap[][];
 	public String data = null;
+	
+	//CONSTRUCTOR
 	public ReadData() {
 		
 		
@@ -44,7 +46,7 @@ public class ReadData extends AbstractDAO {
 		String url = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
 		String login = "root";
 		String passwd = "";
-		Connection cn = null; 
+		Connection cn = null;
 		Statement st = null;
 		ResultSet rs = null;
 		
@@ -54,7 +56,7 @@ public class ReadData extends AbstractDAO {
 		cn = DriverManager.getConnection(url, login, passwd);
 		
 		st = (Statement) cn.createStatement();
-		String sql = "SELECT * FROM	maps WHERE id = 5";
+		String sql = "SELECT * FROM	maps";
 		
 		rs = st.executeQuery(sql);
 		while(rs.next()) {
@@ -90,7 +92,7 @@ public class ReadData extends AbstractDAO {
 		}
 		
 		
-		for(int i = 0; i < this.tabMap.length; i++) {
+		/*for(int i = 0; i < this.tabMap.length; i++) {
             for(int j =0; j < this.tabMap.length; j++) {
                  
                 System.out.print(this.tabMap[i][j]);
@@ -98,9 +100,13 @@ public class ReadData extends AbstractDAO {
  
             }
             System.out.println("");
-        }
+        }*/
 		
 		
 		
+	}
+	
+	public IModel getReadData() {
+		return new ReadData();
 	}
 }

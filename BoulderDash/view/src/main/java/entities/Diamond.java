@@ -2,6 +2,7 @@ package entities;
 
 import java.awt.Image;
 
+
 /**
  * 
  * @author Flavien Spataro
