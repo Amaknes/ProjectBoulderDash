@@ -25,9 +25,10 @@ public class Main  {
 	
     public static void main(final String[] args) throws SQLException{
     	
-       Controller controller = new Controller(1);
+
+        ReadData data = new ReadData(); // -> lire base de donnée
+       Controller controller = new Controller(1, data.tabMap);
        controller.start();
     
-      // ReadData data = new ReadData(); // -> lire base de donnée
     }
     }

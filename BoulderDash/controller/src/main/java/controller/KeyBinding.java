@@ -30,22 +30,22 @@ public class KeyBinding implements KeyListener {
 		int key = k.getKeyCode();
 		switch (key) {
 			case KeyEvent.VK_DOWN : 
-				Player.move(1);
+				//Player.move(1);
 				break;
 			case KeyEvent.VK_UP:
-				Player.move(2);
+				//Player.move(2);
 				break;
 			case KeyEvent.VK_RIGHT:
-				Player.move(3);
+				//Player.move(3);
 				break;
 			case KeyEvent.VK_LEFT:
-				Player.move(4);
+				//Player.move(4);
 				break;
 		}
 	}
 	@Override
 	public void keyReleased(KeyEvent k) {
-		Player.move(0);
+		//Player.move(0);
 		// TODO Auto-generated method stub
 		
 	}

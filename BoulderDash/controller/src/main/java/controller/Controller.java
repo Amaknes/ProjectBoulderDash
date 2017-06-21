@@ -1,5 +1,6 @@
 package controller;
 
+import entities.Player;
 import model.IModel;
 import view.IView;
 import view.Window;
@@ -23,13 +24,14 @@ public class Controller {
 	/** The model. */
 	private final IModel model;
 
-	public Controller(int level) {
+	public Controller(int level, char[][] tabMap) {
 		this.view = null;
 		this.model = null;
 		this.initMap(level);
 		gameRunning = true;
 		this.level = level;
 		this.window= new Window();
+		this.inGameLoop(tabMap);
 	}
 
 	public void start() {
@@ -45,12 +47,20 @@ public class Controller {
 	 * Controller
 	 * 
 	 * @author Amaury VINCENT
+	 * @param tabMap 
 	 * @since 2017-06-20
 	 * 
 	 */
-	public void inGameLoop() {
+	public void inGameLoop(char[][] tabMap) {
 		// RockfordDeplacementAcknoledgement
-
+		while (gameRunning) {
+			Player.move(1,tabMap);
+			try {
+			    Thread.sleep(1000);                 //1000 milliseconds is one second.
+			} catch(InterruptedException ex) {
+			    Thread.currentThread().interrupt();
+			}
+		}
 		// Monster Deplacement
 		
 		// Gravity
