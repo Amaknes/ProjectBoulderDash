@@ -45,15 +45,15 @@ public class Panel extends JPanel  {
 	        			g.drawImage(img4, i*16, j*16, this);
 	        			break;
 	            	}
-	                System.out.print(data.tabMap[i][j]);
+	                
 	             
 	 
 	            }
-	            System.out.println("");
-	            System.out.println("fin ligne");
+	            //System.out.println("");
+	            //System.out.println("fin ligne");
 	        }
 
-            System.out.println("fin tableau");
+            //System.out.println("fin tableau");
             
             
 			
