@@ -26,10 +26,12 @@ public class StrategyDecider {
 			 	if(TestedCaseOrigin == 'D')
 			 		{
 			 		this.ChangeStrategy(new Tumbling(true,'G'));
+			 		this.Strat.AlterMap(CaseX, CaseY, controller);
 			 		}
 				else
 			 		{
 					this.ChangeStrategy(new Tumbling(true,'R'));
+					this.Strat.AlterMap(CaseX, CaseY, controller);
 			 		}
 		 	}
 		 else
@@ -53,6 +55,22 @@ public class StrategyDecider {
 		}
 		//Begin the Simple System-Gravity checks
 		 if(TestedCase == 'V')
+		 {
+			 
+		 }
+		 if(TestedCase == 'M')
+		 {
+			 
+		 }
+		 if(TestedCase == 'm')
+		 {
+			 
+		 }
+		 if(TestedCase == 'p')
+		 {
+			 
+		 }
+		 if(TestedCase == 'P')
 		 {
 			 
 		 }
