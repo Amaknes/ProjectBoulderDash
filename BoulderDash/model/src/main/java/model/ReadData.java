@@ -59,9 +59,8 @@ public class ReadData implements IModel {
 		String sql = "SELECT * FROM	maps";
 		
 		rs = st.executeQuery(sql);
+		
 		while(rs.next()) {
-			
-			
 			this.data = (rs.getString("map"));
 		}
 		
@@ -81,13 +80,8 @@ public class ReadData implements IModel {
 		String str = this.data;
 		splitArray = str.split(";");
 		for(int i = 0; i<25;i++){
-			   
-			
 			for(int y = 0; y<25;y++){
-				
-				
 				this.tabMap[i][y]=splitArray[i].charAt(y);
-				
 			} 
 		}
 		

@@ -14,9 +14,20 @@ import model.*;
 
 public class Panel extends JPanel  {
 	
+	private boolean FirstTime = true;
 	
 	public void paintComponent(Graphics g) {
+		//System.out.println("paint compnentn : " + FirstTime);
+		super.paintComponent(g);
+		
 		try {
+
+			System.out.println("Avant If : "+this.FirstTime);
+			if(this.FirstTime == true) {
+				System.out.println("If : "+this.FirstTime);
+				//System.out.println("true");
+				
+				//return;
 			
 			ReadData data = new ReadData();
 			
@@ -44,14 +55,32 @@ public class Panel extends JPanel  {
 	            		BufferedImage img4 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\diamond.png"));	
 	        			g.drawImage(img4, i*16, j*16, this);
 	        			break;
+	            	case 'P':
+	            		BufferedImage img5 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\SpritePlayer.png"));	
+	        			g.drawImage(img5, i*16, j*16, this);
+	        			break;
+	        			default:break;
+	            	
 	            	}
+	           }
+			}
+			}
+		
+			
+	           else if(this.FirstTime == false) {
+
+					System.out.println("Else : "+this.FirstTime);
+	            	BufferedImage img = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\SpritePlayer.png"));	
+        			g.drawImage(img, 160, 160, this);
+        			
+	           }
 	                
 	             
 	 
-	            }
+	            
 	            //System.out.println("");
 	            //System.out.println("fin ligne");
-	        }
+	        
 
             //System.out.println("fin tableau");
             
@@ -60,12 +89,25 @@ public class Panel extends JPanel  {
 			} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 
+		this.FirstTime=false;
+		System.out.println(FirstTime);
+		repaint();
 	}
-	
-	
-	
-	
-	
+		
+		/*public void setFirstTime(boolean p) {
+
+			System.out.println("setFirst time : " + FirstTime);
+			this.FirstTime=p;
+			repaint();
+		
+		}*/
 }
+
+	
+	
+	
+	
+	
+	
+
