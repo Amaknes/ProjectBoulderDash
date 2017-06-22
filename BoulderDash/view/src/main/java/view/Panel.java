@@ -43,27 +43,27 @@ public class Panel extends JPanel  {
 	                 
 	            	switch(this.map[y][x]) {
 	            	case 'W':
-	            		BufferedImage img = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\wall.png"));	
+	            		BufferedImage img = ImageIO.read(new File("\\Ressourcies\\wall.png"));	
 	        			g.drawImage(img, x*16, y*16, this);
 	        			break;
 	            	case 'S':
-	            		BufferedImage img1 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\stone.png"));	
+	            		BufferedImage img1 = ImageIO.read(new File("\\Ressourcies\\stone.png"));	
 	        			g.drawImage(img1, x*16, y*16, this);
 	        			break;
 	            	case 'D':
-	            		BufferedImage img2 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\dirt.png"));	
+	            		BufferedImage img2 = ImageIO.read(new File("\\Ressourcies\\dirt.png"));	
 	        			g.drawImage(img2, x*16, y*16, this);
 	        			break;
 	            	case 'V':
-	            		BufferedImage img3 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\void.png"));	
+	            		BufferedImage img3 = ImageIO.read(new File("\\Ressourcies\\void.png"));	
 	        			g.drawImage(img3, x*16, y*16, this);
 	        			break;
 	            	case 'G':
-	            		BufferedImage img4 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\diamond.png"));	
+	            		BufferedImage img4 = ImageIO.read(new File("\\Ressourcies\\diamond.png"));	
 	        			g.drawImage(img4, x*16, y*16, this);
 	        			break;
 	            	case 'P':
-	            		BufferedImage img5 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\SpritePlayer.png"));	
+	            		BufferedImage img5 = ImageIO.read(new File("\\Ressourcies\\SpritePlayer.png"));	
 	        			g.drawImage(img5, x*16, y*16, this);
 	        			break;
 	        			default:break;
@@ -98,7 +98,17 @@ public class Panel extends JPanel  {
 	}
 	
 	public void setMap(char[][] map, Panel WindowPanel) {
+		
 		this.map = map;
+		/*for(int i = 0; i < this.map.length; i++) {
+            for(int j =0; j < this.map.length; j++) {
+                 
+                System.out.print(this.map[i][j]);
+             
+ 
+            }
+            System.out.println("");
+        }*/
 		System.out.println("setmap");
 	}
 		

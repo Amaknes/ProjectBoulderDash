@@ -96,7 +96,7 @@ public class ReadData implements IModel {
             System.out.println("");
         }*/
 		
-		
+		System.out.println("readata");
 		
 	}
 	

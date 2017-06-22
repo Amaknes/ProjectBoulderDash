@@ -28,21 +28,13 @@ public class Controller {
 	public Controller(int level, char[][] tabMap) {
 		this.view = null;
 		this.model = null;
-		this.initMap(level);
 		gameRunning = true;
 		this.level = level;
 		this.window= new Window();
+		
 		this.inGameLoop(tabMap);
 	}
 
-	public void start() {
-
-	}
-
-	public char initMap(int level) {
-
-		return 0;
-	}
 
 	/**
 	 * Controller
@@ -58,8 +50,9 @@ public class Controller {
 
 			this.newMap = Player.move(1,tabMap);
 			this.map = this.newMap;
+			this.window.UpdateMap(this.map);
 			
-			try {
+						try {
 			    Thread.sleep(1000);                 //1000 milliseconds is one second.
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();

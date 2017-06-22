@@ -42,6 +42,7 @@ public class Window
 	
 	public void UpdateMap(char[][] map){
 
+		
 		WindowPanel.setMap(map,WindowPanel);
 		WindowFrame.setContentPane(WindowPanel);
 		//WindowPanel.setFirstTime(false);

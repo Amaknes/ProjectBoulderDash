@@ -28,7 +28,6 @@ public class Main  {
 
         ReadData data = new ReadData(); // -> lire base de donnée
        Controller controller = new Controller(1, data.tabMap);
-       controller.start();
     
     }
     }
