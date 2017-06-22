@@ -19,7 +19,7 @@ public class Player extends Entities {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static void move(int a, char[][] tabMap){
+	public static char[][] move(int a, char[][] tabMap){
 		
 		if(a==1) { //left
 			int found=0;
@@ -38,13 +38,8 @@ public class Player extends Entities {
 	            	}
 	            }
 	        }
-			for(int i = 0; i < 25; i++) {
-	            for(int j =0; j < 25; j++) {
-	            	System.out.print(tabMap[i][j]);		
-	            }
-	            System.out.println("");
-	        }
-	        System.out.println("");
+			
 		}
+		return tabMap;
 	}
 }
