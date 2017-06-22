@@ -14,9 +14,11 @@ public class Fall implements Strategy {
 		controller.setTableauValue(CaseX, CaseY,'V');
 		controller.setTableauValue(CaseX, CaseY-1,CharToUse);
 		//A rajouter,Tuer le joueur Ici
-		if(CharDestroyed == 'P')
+		if(controller.getTableauValue(CaseX, CaseY-2) == 'P')
 		{
-			
+		controller.setTableauValue(CaseX, CaseY-2, CharToUse);
+		controller.setTableauValue(CaseX, CaseY-1,CharToUse);
+		controller.se
 		}
 	}
 

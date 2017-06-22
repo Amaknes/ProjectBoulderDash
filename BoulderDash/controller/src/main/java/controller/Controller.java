@@ -83,4 +83,14 @@ public class Controller {
 	public void setTableauValue(int CaseX, int CaseY, char Value) {
 		this.map[CaseX][CaseY] = Value;
 	}
+
+
+	public boolean isGameRunning() {
+		return gameRunning;
+	}
+
+
+	public void setGameRunning(boolean gameRunning) {
+		this.gameRunning = gameRunning;
+	}
 }
