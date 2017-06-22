@@ -58,13 +58,7 @@ public class Controller {
 
 			this.newMap = Player.move(1,tabMap);
 			this.map = this.newMap;
-			for(int i = 0; i < 25; i++) {
-	            for(int j =0; j < 25; j++) {
-	            	System.out.print(this.map[i][j]);		
-	            }
-	            System.out.println("");
-	        }
-	        System.out.println("");
+			
 			try {
 			    Thread.sleep(1000);                 //1000 milliseconds is one second.
 			} catch(InterruptedException ex) {
