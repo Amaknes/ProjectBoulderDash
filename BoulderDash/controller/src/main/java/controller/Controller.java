@@ -31,8 +31,8 @@ public class Controller {
 		gameRunning = true;
 		this.level = level;
 		this.window= new Window();
-		
-		this.inGameLoop(tabMap);
+		this.map = tabMap;
+		this.inGameLoop(this.map);
 	}
 
 
@@ -48,14 +48,13 @@ public class Controller {
 		// RockfordDeplacementAcknoledgement
 		while (gameRunning) {
 
-			int keypressed;
-			keypressed = Player.getkeypressed(1);
-			this.newMap = Player.move(keypressed,tabMap);
-			this.map = this.newMap;
-			this.window.UpdateMap(this.map);
+			
+			//this.newMap = Player.move(1,tabMap);
+			//this.map = this.newMap;
+			this.window.UpdateMap(tabMap);
 			
 						try {
-			    Thread.sleep(1000);                 //1000 milliseconds is one second.
+			    Thread.sleep(200);                 //1000 milliseconds is one second.
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();
 			}

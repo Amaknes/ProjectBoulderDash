@@ -11,8 +11,7 @@ import javax.swing.JFrame;
  * @since       2017-06-16
  * 
  */
-public class Window 
-{
+public class Window  {
 	Frame WindowFrame;
 	Panel WindowPanel;
 	
@@ -27,7 +26,7 @@ public class Window
 		WindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		WindowFrame.setContentPane(WindowPanel);
 		//WindowPanel.addKeyListener(q);
-		
+		WindowFrame.addKeyListener(WindowPanel);
 		WindowFrame.setVisible(true);
 	}
 	/**
