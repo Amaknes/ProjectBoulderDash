@@ -18,6 +18,7 @@ public class Controller {
 	private char[][] newMap;
 	private boolean gameRunning;
 	private Window window;
+	public Controller controller;
 
 	/** The view. */
 	private final IView view;
@@ -59,6 +60,8 @@ public class Controller {
 			this.newMap = Player.move(1,tabMap);
 			this.map = this.newMap;
 			
+			window.UpdateMap(map);
+			
 			try {
 			    Thread.sleep(1000);                 //1000 milliseconds is one second.
 			} catch(InterruptedException ex) {
@@ -74,6 +77,15 @@ public class Controller {
 	// getter
 	public int getLevel() {
 		return level;
+	}
+	
+
+	public Controller getController() {
+		return controller;
+	}
+
+	public void setController(Controller controller) {
+		this.controller = controller;
 	}
 
 	// setter

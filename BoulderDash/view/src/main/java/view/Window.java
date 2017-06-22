@@ -2,6 +2,7 @@ package view;
 
 import javax.swing.JFrame;
 
+
 /**
  * 
  *
@@ -14,6 +15,7 @@ public class Window
 {
 	Frame WindowFrame;
 	Panel WindowPanel;
+	
 	
 	public Window() 
 	{
@@ -35,6 +37,10 @@ public class Window
 	void Display(char[][] Table)
 	{
 		
+	}
+	public void UpdateMap(char[][] map){
+		
+		WindowFrame.setContentPane(WindowPanel);
 	}
 }
 
