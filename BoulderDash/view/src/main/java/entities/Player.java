@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.imageio.ImageIO;
+
 /**
  * 
  * @author Flavien Spataro
@@ -23,23 +24,23 @@ public class Player extends Entities {
 		
 		if(a==1) { //left
 			int found=0;
-			for(int i = 0; i < 25; i++) {
-	            for(int j =0; j < 25; j++) {
+			for(int y = 0; y < 25; y++) {
+	            for(int x =0; x < 25; x++) {
 	                 
-	            	if(tabMap[i][j]=='P' && found==0) {
-	            		if(tabMap[i][j+1]=='W') {
+	            	if(tabMap[y][x]=='P' && found==0) {
+	            		if(tabMap[y][x+1]=='W') {
 	            			found=1;
 	            			break;
 	            		}
-	            		tabMap[i][j] = 'V';
-	            		tabMap[i][j+1] = 'P';
+	            		tabMap[y][x] = 'V';
+	            		tabMap[y][x+1] = 'P';
 	            		found=1;
 	            		break;
 	            	}
 	            }
 	        }
-			
 		}
+		
 		return tabMap;
 	}
 }

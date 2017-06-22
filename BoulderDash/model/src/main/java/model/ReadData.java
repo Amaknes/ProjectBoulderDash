@@ -56,7 +56,7 @@ public class ReadData implements IModel {
 		cn = DriverManager.getConnection(url, login, passwd);
 		
 		st = (Statement) cn.createStatement();
-		String sql = "SELECT * FROM	maps";
+		String sql = "SELECT * FROM	maps WHERE id=1";
 		
 		rs = st.executeQuery(sql);
 		

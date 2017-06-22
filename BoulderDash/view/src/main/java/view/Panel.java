@@ -15,6 +15,7 @@ import model.*;
 public class Panel extends JPanel  {
 	
 	private boolean FirstTime = true;
+	public char map[][];
 	
 	public void paintComponent(Graphics g) {
 		//System.out.println("paint compnentn : " + FirstTime);
@@ -24,40 +25,46 @@ public class Panel extends JPanel  {
 
 			System.out.println("Avant If : "+this.FirstTime);
 			if(this.FirstTime == true) {
+				for(int i = 0; i < map.length; i++) {
+		            for(int j =0; j < map.length; j++) {
+		            	System.out.print(map[i][j]);
+		            }
+		            System.out.println("");
+				}
 				System.out.println("If : "+this.FirstTime);
 				//System.out.println("true");
 				
 				//return;
 			
-			ReadData data = new ReadData();
+			//ReadData data = new ReadData();
 			
-			for(int i = 0; i < data.tabMap.length; i++) {
-	            for(int j =0; j < data.tabMap.length; j++) {
+			for(int y=0; y < this.map.length; y++) {
+	            for(int x=0; x < this.map.length; x++) {
 	                 
-	            	switch(data.tabMap[i][j]) {
+	            	switch(this.map[y][x]) {
 	            	case 'W':
 	            		BufferedImage img = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\wall.png"));	
-	        			g.drawImage(img, i*16, j*16, this);
+	        			g.drawImage(img, x*16, y*16, this);
 	        			break;
 	            	case 'S':
 	            		BufferedImage img1 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\stone.png"));	
-	        			g.drawImage(img1, i*16, j*16, this);
+	        			g.drawImage(img1, x*16, y*16, this);
 	        			break;
 	            	case 'D':
 	            		BufferedImage img2 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\dirt.png"));	
-	        			g.drawImage(img2, i*16, j*16, this);
+	        			g.drawImage(img2, x*16, y*16, this);
 	        			break;
 	            	case 'V':
 	            		BufferedImage img3 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\void.png"));	
-	        			g.drawImage(img3, i*16, j*16, this);
+	        			g.drawImage(img3, x*16, y*16, this);
 	        			break;
 	            	case 'G':
 	            		BufferedImage img4 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\diamond.png"));	
-	        			g.drawImage(img4, i*16, j*16, this);
+	        			g.drawImage(img4, x*16, y*16, this);
 	        			break;
 	            	case 'P':
 	            		BufferedImage img5 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\SpritePlayer.png"));	
-	        			g.drawImage(img5, i*16, j*16, this);
+	        			g.drawImage(img5, x*16, y*16, this);
 	        			break;
 	        			default:break;
 	            	
@@ -67,13 +74,7 @@ public class Panel extends JPanel  {
 			}
 		
 			
-	           else if(this.FirstTime == false) {
-
-					System.out.println("Else : "+this.FirstTime);
-	            	BufferedImage img = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\Ressourcies\\SpritePlayer.png"));	
-        			g.drawImage(img, 160, 160, this);
-        			
-	           }
+	           
 	                
 	             
 	 
@@ -90,18 +91,17 @@ public class Panel extends JPanel  {
 			e.printStackTrace();
 		}
 
-		this.FirstTime=false;
-		System.out.println(FirstTime);
+		//this.FirstTime=true;
+		//System.out.println(FirstTime);
 		repaint();
+	
+	}
+	
+	public void setMap(char[][] map, Panel WindowPanel) {
+		this.map = map;
+		System.out.println("setmap");
 	}
 		
-		/*public void setFirstTime(boolean p) {
-
-			System.out.println("setFirst time : " + FirstTime);
-			this.FirstTime=p;
-			repaint();
-		
-		}*/
 }
 
 	

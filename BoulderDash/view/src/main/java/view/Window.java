@@ -26,6 +26,7 @@ public class Window
 		WindowFrame.setLocationRelativeTo(null);
 		WindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		WindowFrame.setContentPane(WindowPanel);
+		WindowPanel.addKeyListener(q);
 		
 		WindowFrame.setVisible(true);
 	}
@@ -41,6 +42,7 @@ public class Window
 	
 	public void UpdateMap(char[][] map){
 
+		WindowPanel.setMap(map,WindowPanel);
 		WindowFrame.setContentPane(WindowPanel);
 		//WindowPanel.setFirstTime(false);
 	}
