@@ -14,8 +14,6 @@ import entities.Player;
 
 public class KeyBinding implements KeyListener {
 	private int id;
-
-	
 	
 	public int getId() {
 		return id;
@@ -30,16 +28,16 @@ public class KeyBinding implements KeyListener {
 		int key = k.getKeyCode();
 		switch (key) {
 			case KeyEvent.VK_DOWN : 
-				//Player.move(1);
+				//Player.move(1, tabMap);
 				break;
 			case KeyEvent.VK_UP:
-				//Player.move(2);
+				//Player.move(2, tabMap);
 				break;
 			case KeyEvent.VK_RIGHT:
-				//Player.move(3);
+				//Player.move(3, tabMap);
 				break;
 			case KeyEvent.VK_LEFT:
-				//Player.move(4);
+				//Player.move(4, tabMap);
 				break;
 		}
 	}

@@ -48,7 +48,9 @@ public class Controller {
 		// RockfordDeplacementAcknoledgement
 		while (gameRunning) {
 
-			this.newMap = Player.move(1,tabMap);
+			int keypressed;
+			keypressed = Player.getkeypressed(1);
+			this.newMap = Player.move(keypressed,tabMap);
 			this.map = this.newMap;
 			this.window.UpdateMap(this.map);
 			
