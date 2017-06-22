@@ -38,6 +38,7 @@ public class Window
 	{
 		
 	}
+	
 	public void UpdateMap(char[][] map){
 		
 		WindowFrame.setContentPane(WindowPanel);
