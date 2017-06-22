@@ -17,9 +17,9 @@ public class Fall implements Strategy {
 		if(controller.getTableauValue(CaseX, CaseY-2) == 'P')
 		{
 		controller.setTableauValue(CaseX, CaseY-2, CharToUse);
-		controller.setTableauValue(CaseX, CaseY-1,CharToUse);
-		controller.se
-		}
+		controller.setTableauValue(CaseX, CaseY-1,'V');
+		controller.setGameRunning(false);
 	}
 
+}
 }
