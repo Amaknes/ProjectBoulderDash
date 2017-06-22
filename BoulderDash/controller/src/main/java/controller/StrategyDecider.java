@@ -44,36 +44,30 @@ public class StrategyDecider {
 				 	if(TestedCaseOrigin == 'D')
 				 		{
 				 		this.ChangeStrategy(new Tumbling(false,'G'));
+				 		this.Strat.AlterMap(CaseX, CaseY, controller);
 				 		}
 					else
 				 		{
 						this.ChangeStrategy(new Tumbling(false,'R'));
+						this.Strat.AlterMap(CaseX, CaseY, controller);
 				 		}
 			 	}
 		 	}
 		 //End Tumbling Test
 		}
 		//Begin the Simple System-Gravity checks
-		 if(TestedCase == 'V')
+		 if(TestedCase == 'V' || TestedCase == 'M')
 		 {
-			 
+			 this.ChangeStrategy(new Fall(TestedCase));
+			 this.Strat.AlterMap(CaseX, CaseY, controller);
 		 }
-		 if(TestedCase == 'M')
-		 {
-			 
-		 }
+		 
 		 if(TestedCase == 'm')
 		 {
-			 
+			 this.ChangeStrategy(new DiamondMonsterKill());
+			 this.Strat.AlterMap(CaseX, CaseY, controller);
 		 }
-		 if(TestedCase == 'p')
-		 {
-			 
-		 }
-		 if(TestedCase == 'P')
-		 {
-			 
-		 }
+		
 	}
  }
 }
