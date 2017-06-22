@@ -26,7 +26,7 @@ public class Window
 		WindowFrame.setLocationRelativeTo(null);
 		WindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		WindowFrame.setContentPane(WindowPanel);
-		WindowPanel.addKeyListener(q);
+		//WindowPanel.addKeyListener(q);
 		
 		WindowFrame.setVisible(true);
 	}

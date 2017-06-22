@@ -39,7 +39,7 @@ public class KeyBinding implements KeyListener {
 				//Player.move(3);
 				break;
 			case KeyEvent.VK_LEFT:
-				Player.move(4);
+				//Player.move(4);
 				break;
 		}
 	}
