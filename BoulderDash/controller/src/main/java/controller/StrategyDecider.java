@@ -23,7 +23,7 @@ public class StrategyDecider {
 		 if(TestedCase == 'V' && TestedCase1 == 'V')
 		 	{
 			 	controller.setTableauValue(CaseX, CaseY, 'V');
-			 	if(TestedCaseOrigin == 'D')
+			 	if(TestedCaseOrigin == 'G')
 			 		{
 			 		this.ChangeStrategy(new Tumbling(true,'G'));
 			 		this.Strat.AlterMap(CaseX, CaseY, controller);
@@ -41,7 +41,7 @@ public class StrategyDecider {
 			 if(TestedCase == 'V' && TestedCase1 == 'V')
 			 	{
 				 	controller.setTableauValue(CaseX, CaseY, 'V');
-				 	if(TestedCaseOrigin == 'D')
+				 	if(TestedCaseOrigin == 'G')
 				 		{
 				 		this.ChangeStrategy(new Tumbling(false,'G'));
 				 		this.Strat.AlterMap(CaseX, CaseY, controller);
@@ -62,7 +62,7 @@ public class StrategyDecider {
 			 this.Strat.AlterMap(CaseX, CaseY, controller);
 		 }
 		 
-		 if(TestedCase == 'm')
+		 if(TestedCase == 'B')
 		 {
 			 this.ChangeStrategy(new DiamondMonsterKill());
 			 this.Strat.AlterMap(CaseX, CaseY, controller);
