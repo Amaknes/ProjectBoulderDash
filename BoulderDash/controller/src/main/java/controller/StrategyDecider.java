@@ -56,9 +56,9 @@ public class StrategyDecider {
 		 //End Tumbling Test
 		}
 		//Begin the Simple System-Gravity checks
-		 if(TestedCase == 'V' || TestedCase == 'M')
+		 if(TestedCase == 'V' || TestedCase == 'M'|| TestedCase =='P')
 		 {
-			 this.ChangeStrategy(new Fall(TestedCase));
+			 this.ChangeStrategy(new Fall(TestedCaseOrigin,TestedCase));
 			 this.Strat.AlterMap(CaseX, CaseY, controller);
 		 }
 		 

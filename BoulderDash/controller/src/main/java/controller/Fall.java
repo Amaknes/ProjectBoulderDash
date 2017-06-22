@@ -2,9 +2,11 @@ package controller;
 
 public class Fall implements Strategy {
 	private char CharToUse;
-	Fall(char CharToUse)
+	private char CharDestroyed;
+	Fall(char CharToUse,char CharToDestroy)
 	{
-		this.CharToUse=CharToUse;
+		this.CharToUse = CharToUse;
+		this.CharDestroyed = CharToDestroy;
 	}
 	@Override
 	public void AlterMap(int CaseX, int CaseY, Controller controller) {
@@ -12,6 +14,10 @@ public class Fall implements Strategy {
 		controller.setTableauValue(CaseX, CaseY,'V');
 		controller.setTableauValue(CaseX, CaseY-1,CharToUse);
 		//A rajouter,Tuer le joueur Ici
+		if(CharDestroyed == 'P')
+		{
+			
+		}
 	}
 
 }
