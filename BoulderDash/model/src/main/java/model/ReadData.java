@@ -12,7 +12,6 @@ import com.mysql.cj.api.jdbc.Statement;
 
 import java.sql.ResultSet;
 
-import model.dao.*;
 
 /**
  * Controller

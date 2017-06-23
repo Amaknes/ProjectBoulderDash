@@ -26,13 +26,13 @@ public class Player extends Entities {
 	}
 	
 	public static void boucle(){
-		System.out.println("touche");
+		//System.out.println("touche");
 	}
 	private void dead() {
 		
 	}
 	public static char[][] move(int a, char[][] tabMap){
-		System.out.println("Move !");
+		//System.out.println("Move !");
 		
 		int depX = 0;
 		int depY = 0;
@@ -69,10 +69,10 @@ public class Player extends Entities {
 	            			tabMap[y][x] = 'V';
 		            		tabMap[y+depY][x+depX] = 'P';
 		            		nbrDiamond+=1;
-		            		System.out.println("Diamonds : "+nbrDiamond);
+		            		//System.out.println("Diamonds : "+nbrDiamond);
 	            		}
 	            		else if (tabMap[y+2][x]=='S') {
-	            			this.dead();
+	            		//	this.dead();
 	            			
 	            		}
 	            		found=1;
@@ -81,7 +81,7 @@ public class Player extends Entities {
 	            }
 	        }
 		//}
-		System.out.println(depX);
+		//System.out.println(depX);
 		return tabMap;
 	}
 }
