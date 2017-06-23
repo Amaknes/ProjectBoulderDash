@@ -22,7 +22,7 @@ public class Panel extends JPanel implements KeyListener {
 	
 	public void paintComponent(Graphics g) {
 
-		super.paintComponent(g);
+		//super.paintComponent(g);
 		
 		try {
 			
@@ -33,27 +33,27 @@ public class Panel extends JPanel implements KeyListener {
 	                 
 	            	switch(this.map[y][x]) {
 	            	case 'W':
-	            		BufferedImage img = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\wall.png"));	
+	            		BufferedImage img = ImageIO.read(new File("wall.png"));	
 	        			g.drawImage(img, x*16, y*16, this);
 	        			break;
 	            	case 'S':
-	            		BufferedImage img1 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\stone.png"));	
+	            		BufferedImage img1 = ImageIO.read(new File("stone.png"));	
 	        			g.drawImage(img1, x*16, y*16, this);
 	        			break;
 	            	case 'D':
-	            		BufferedImage img2 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\dirt.png"));	
+	            		BufferedImage img2 = ImageIO.read(new File("dirt.png"));	
 	        			g.drawImage(img2, x*16, y*16, this);
 	        			break;
 	            	case 'V':
-	            		BufferedImage img3 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\void.png"));	
+	            		BufferedImage img3 = ImageIO.read(new File("void.png"));	
 	        			g.drawImage(img3, x*16, y*16, this);
 	        			break;
 	            	case 'G':
-	            		BufferedImage img4 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\diamond.png"));	
+	            		BufferedImage img4 = ImageIO.read(new File("diamond.png"));	
 	        			g.drawImage(img4, x*16, y*16, this);
 	        			break;
 	            	case 'P':
-	            		BufferedImage img5 = ImageIO.read(new File("C:\\Users\\Utilisateur\\git\\ProjectBoulderDash\\BoulderDash\\main\\target\\SpritePlayer.png"));	
+	            		BufferedImage img5 = ImageIO.read(new File("SpritePlayer.png"));	
 	        			g.drawImage(img5, x*16, y*16, this);
 	        			break;
 	        			default:break;

@@ -28,7 +28,9 @@ public class Player extends Entities {
 	public static void boucle(){
 		System.out.println("touche");
 	}
-	
+	private void dead() {
+		
+	}
 	public static char[][] move(int a, char[][] tabMap){
 		System.out.println("Move !");
 		
@@ -68,6 +70,10 @@ public class Player extends Entities {
 		            		tabMap[y+depY][x+depX] = 'P';
 		            		nbrDiamond+=1;
 		            		System.out.println("Diamonds : "+nbrDiamond);
+	            		}
+	            		else if (tabMap[y+2][x]=='S') {
+	            			this.dead();
+	            			
 	            		}
 	            		found=1;
 	            		break;

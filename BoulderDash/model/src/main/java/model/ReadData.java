@@ -86,15 +86,15 @@ public class ReadData implements IModel {
 		}
 		
 		
-		/*for(int i = 0; i < this.tabMap.length; i++) {
+		for(int i = 0; i < this.tabMap.length; i++) {
             for(int j =0; j < this.tabMap.length; j++) {
                  
                 System.out.print(this.tabMap[i][j]);
-             
+                
  
             }
             System.out.println("");
-        }*/
+        }
 		
 		System.out.println("readata");
 		
