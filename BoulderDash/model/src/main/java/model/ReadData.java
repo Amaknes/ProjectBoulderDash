@@ -31,7 +31,7 @@ public class ReadData implements IModel {
 		
 		
 		try {
-			this.lireBase();
+			this.ReadBase();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -40,7 +40,7 @@ public class ReadData implements IModel {
 		
 }
 	
-	public void lireBase() throws SQLException {
+	public void ReadBase() throws SQLException {
 		
 		String url = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
 		String login = "root";

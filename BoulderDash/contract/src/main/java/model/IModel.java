@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface IModel {
 	
-	public void lireBase() throws SQLException;
+	public void ReadBase() throws SQLException;
 	
 	//public void split();
 	
