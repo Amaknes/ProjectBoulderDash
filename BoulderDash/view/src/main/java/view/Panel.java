@@ -81,6 +81,9 @@ public class Panel extends JPanel implements KeyListener {
 		
 		this.map = map;
 	}
+	public char[][] getMap() {
+		return this.map;
+	}
 
 	@Override
 	public void keyPressed(KeyEvent k) {

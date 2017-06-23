@@ -3,16 +3,16 @@ package view;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import model.ReadData;
+import view.Panel;
 
 public class PanelTest {
 
 	private char[][] tab = new char[25][25];
 
 	@Test
-	public void testSetChar() {
-		ReadData data = new ReadData();
+	public void testGetChar() {
+		Panel panel = new Panel();
 		final char expected = 'W';
-		assertEquals(expected, data.tabMap[0][0]);
+		assertEquals(expected, panel.getMap()[0][0]);
 	}
 }
