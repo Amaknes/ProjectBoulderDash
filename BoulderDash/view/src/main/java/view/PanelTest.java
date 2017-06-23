@@ -19,7 +19,10 @@ public class PanelTest implements KeyListener {
 	@Test
 	public void testGetChar() {
 		
-		this.keyTyped(KeyEvent.VK_DOWN);
+		Panel panel = new Panel();
+		
+	    
+		panel.keyTyped(KeyEvent.VK_DOWN);
 		final String expectedLeft = "Left";
 		final String expectedRight = "Right";
 		final String expectedDown = "Down";
