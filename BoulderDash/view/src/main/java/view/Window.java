@@ -21,7 +21,7 @@ public class Window  {
 		this.WindowFrame = new Frame();
 		this.WindowPanel = new Panel();
 		WindowFrame.setTitle("BoulderDash");
-		WindowFrame.setSize(400,400);
+		WindowFrame.setSize(416,438);
 		WindowFrame.setLocationRelativeTo(null);
 		WindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		WindowFrame.setContentPane(WindowPanel);
