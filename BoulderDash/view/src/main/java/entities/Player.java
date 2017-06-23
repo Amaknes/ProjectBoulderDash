@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 /**
- * The Entity who is used to display Rockford
+ * 
  * @author Flavien Spataro
  * @since 2017-06-19
  * 
@@ -45,7 +45,7 @@ public class Player extends Entities {
 		}
 		
 		//if(a==1) { //left
-			int found=0;
+		int found=0;
 			for(int y = 0; y < 25; y++) {
 	            for(int x =0; x < 25; x++) {
 	                 
