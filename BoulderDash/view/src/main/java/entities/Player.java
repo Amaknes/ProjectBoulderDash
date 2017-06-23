@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 /**
- * 
+ * The Entity who is used to display Rockford
  * @author Flavien Spataro
  * @since 2017-06-19
  * 

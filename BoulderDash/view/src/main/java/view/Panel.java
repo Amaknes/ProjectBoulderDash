@@ -15,6 +15,12 @@ import javax.swing.JPanel;
 import model.*;
 import entities.Player;
 
+/**
+ * The equivalent of Jpanel for the creation of the Window
+ * 
+ * @author Amaury VINCENT
+ * @version 1.0
+ */
 public class Panel extends JPanel implements KeyListener {
 	
 	private boolean FirstTime = true;

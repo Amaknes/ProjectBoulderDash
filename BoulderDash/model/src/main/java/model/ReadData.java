@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 
 
 /**
- * Controller
+ * Class that reads from the database and put the data in a Table
  * @author      Loick Legay 
  * @since       2017-06-21
  * 
