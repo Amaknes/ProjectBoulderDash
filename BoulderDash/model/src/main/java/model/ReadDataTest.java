@@ -8,7 +8,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import model.ReadData;
-
+/**
+ * The equivalent of Jpanel for the creation of the Window
+ * 
+ * @author Loïck LEGAY
+ * @version 1.0
+ */
 public class ReadDataTest {
 	private char[][] tab = new char[25][25];
 	
