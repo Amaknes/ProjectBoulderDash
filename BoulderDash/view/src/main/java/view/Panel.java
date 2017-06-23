@@ -68,7 +68,7 @@ public class Panel extends JPanel implements KeyListener {
 			} catch (IOException e) {
 			e.printStackTrace();
 		}
-		repaint();
+		//repaint();
 	
 	}
 	
@@ -86,18 +86,22 @@ public class Panel extends JPanel implements KeyListener {
 				Player.boucle();
 				this.map = Player.move(3, this.map);
 				System.out.println("bas");
+				repaint();
 				break;
 			case KeyEvent.VK_UP:
 				this.map = Player.move(4, this.map);
 				System.out.println("haut");
+				repaint();
 				break;
 			case KeyEvent.VK_RIGHT:
 				this.map = Player.move(2, this.map);
 				System.out.println("droite");
+				repaint();
 				break;
 			case KeyEvent.VK_LEFT:
 				this.map = Player.move(1, this.map);
 				System.out.println("gauche");
+				repaint();
 				break;
 		}
 	}

@@ -14,10 +14,11 @@ import java.awt.event.KeyListener;
  * 
  *
  */
-public class Player extends Entities implements KeyListener {
+public class Player extends Entities {
 	
 	private int posX;
 	private int posY;
+	private static int nbrDiamond;
 	
 	public Player(String name, Image path, char code) {
 		super(name, path, code);
@@ -51,9 +52,23 @@ public class Player extends Entities implements KeyListener {
 	            			found=1;
 	            			break;
 	            		}
-	            		tabMap[y][x] = 'V';
-	            		tabMap[y+depY][x+depX] = 'P';
-	            		System.out.println("Player actuel : "+x+","+y+" | Move pos : "+x+depX+","+y+depY);
+	            		else if(tabMap[y+depY][x+depX]=='S' && tabMap[y+depY*2][x+depX*2]=='V') {
+	            			tabMap[y][x] = 'V';
+	            			tabMap[y+depY][x+depX] = 'P';
+	            			tabMap[y+depY*2][x+depX*2] = 'S';
+	            			found=1;
+	            			break;
+	            		}
+	            		else if (tabMap[y+depY][x+depX]=='D' || tabMap[y+depY][x+depX]=='V') {
+	            			tabMap[y][x] = 'V';
+		            		tabMap[y+depY][x+depX] = 'P';
+	            		}
+	            		else if (tabMap[y+depY][x+depX]=='G') {
+	            			tabMap[y][x] = 'V';
+		            		tabMap[y+depY][x+depX] = 'P';
+		            		nbrDiamond+=1;
+		            		System.out.println("Diamonds : "+nbrDiamond);
+	            		}
 	            		found=1;
 	            		break;
 	            	}
@@ -62,45 +77,5 @@ public class Player extends Entities implements KeyListener {
 		//}
 		System.out.println(depX);
 		return tabMap;
-	}
-
-	@Override
-	public void keyPressed(KeyEvent k) {
-		// TODO Auto-generated method stub
-		int key = k.getKeyCode();
-		switch (key) {
-			case KeyEvent.VK_DOWN :
-				getkeypressed(1);
-				break;
-			case KeyEvent.VK_UP:
-				getkeypressed(2);
-				//move(2, tabMap);
-				break;
-			case KeyEvent.VK_RIGHT:
-				getkeypressed(3);
-				//move(3, char[][] tabMap);
-				break;
-			case KeyEvent.VK_LEFT:
-				getkeypressed(4);
-				//move(4, char[][] tabMap);
-				break;
-		}
-	}
-	
-	public static int getkeypressed(int a){
-		return a;
-	}	
-	
-	
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
 	}
 }

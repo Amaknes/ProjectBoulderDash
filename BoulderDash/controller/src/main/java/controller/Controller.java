@@ -1,5 +1,7 @@
 package controller;
 
+import java.awt.event.KeyListener;
+
 import entities.Player;
 import model.IModel;
 import view.IView;
