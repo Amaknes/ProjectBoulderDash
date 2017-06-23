@@ -29,7 +29,7 @@ public class Panel extends JPanel implements KeyListener {
 	public void paintComponent(Graphics g) {
 
 		//super.paintComponent(g);
-		
+		System.out.println(map[0][0]);
 		try {
 			
 			if(this.FirstTime == true) {
